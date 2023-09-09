@@ -1,0 +1,22 @@
+#bulb{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color:white;
+    border: 5px solid blue;
+
+    
+}
+button{
+    width: 100px;
+    padding: 10px 30px;
+    background-color: lightblue;
+    color: black;
+}
+
+#center{
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
