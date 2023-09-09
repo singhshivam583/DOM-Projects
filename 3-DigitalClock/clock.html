@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Number Guessing Game</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <title>Your Local Time</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body style="background-color: #212121; color: #fff">
+  <body>
     <nav>
       <a href="../index.html" aria-current="page">Home</a>
       <a target="_blank" href="https://github.com/singhshivam583">Git-Hub</a>
     </nav>
-
-    <h1>Start should change the Background color every second</h1>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-    <script src="chaiaurcode.js"></script>
+    <div class="center">
+      <div id="banner"><span>Your local time</span></div>
+      <div id="clock"></div>
+      <div id="banner">Today's</div>
+      <div id="today"></div>
+    </div>
+    <script src="./clock.js"></script>
   </body>
 </html>
