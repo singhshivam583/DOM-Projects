@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
 </head>
 <body>
-    <div class="calculator">
+    <nav>
+        <a href="../index.html" aria-current="page">Home</a>
+        <a target="_blank" href="https://github.com/singhshivam583">Git-Hub</a>
+    </nav>
+    <div class="body">
+        <div class="calculator">
         <h2>Calculator</h2>
         <input type="text" pattern="[0-9]"id="display" >
         <div class="buttons">
@@ -32,6 +38,7 @@
             <button class="operator" id="backspace">←</button>
             <button class="clear" id="clear">C</button>
         </div>
+    </div>
     </div>
     <script src="./calculator.js"></script>
 </body>
