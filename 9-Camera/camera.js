@@ -85,6 +85,9 @@ snapButton.addEventListener('click', () => {
     if(stream && stopButton.disabled){
         alert('Please Open Your Camera')
     }
+    else if(stopButton.disabled == false && startButton.disabled == false){
+        alert('Please Open Your Camera')
+    }
     else{
         // Capture a snapshot from the video feed and display it on the canvas
         canvas.width = videoElement.videoWidth;         // actual width of video 
