@@ -32,12 +32,12 @@
 // camera();
 
 const videoElement = document.getElementById('camera-feed');
-const Button = document.getElementById('control');
-// const stopButton = document.getElementById('stop-camera');
+const startButton = document.getElementById('start-camera');
+const stopButton = document.getElementById('stop-camera');
 
 let stream;
 
-Button.addEventListener('click', async () => {
+startButton.addEventListener('click', async () => {
     try {
         // Get access to the user's camera
         stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -50,10 +50,9 @@ Button.addEventListener('click', async () => {
     } catch (error) {
         console.error('Error accessing the camera:', error);
     }
-    Button.innerHTML='Close Camera'
 });
 
-Button.addEventListener('click', () => {
+stopButton.addEventListener('click', () => {
     if (stream) {
         // Stop the camera stream and release the camera
         const tracks = stream.getTracks();
@@ -64,7 +63,6 @@ Button.addEventListener('click', () => {
         startButton.disabled = false;
         stopButton.disabled = true;
     }
-    Button.innerHTML='Open Camera'
 });
 
 
