@@ -18,12 +18,16 @@ const startChangingColor=function(){
         document.body.style.backgroundColor=randomColor();
     }  
     intervalId= setInterval(changeBgColor,1000)
+    document.querySelector('#start').disabled = true;   
+    document.querySelector('#stop').disabled = false; 
 }
 
 const stopChangingColor=function(){
     clearInterval(intervalId);
     intervalId=null;  
-    console.log(intervalId);             
+    console.log(intervalId);
+    document.querySelector('#start').disabled = false;   
+    document.querySelector('#stop').disabled = true;  
 }
 
 document.querySelector('#start').

@@ -14,12 +14,22 @@
     </nav>
     <div class="body">
         <div class="container">
-        <h1>Camera Access </h1>
-        <div class="box" id="box">
-            <video style="border-radius: 5px;" id="camera-feed" height="374px" width="500px" controls autoplay ></video>
+            <h1>Camera Access </h1>
+            <div class="box" id="box">
+                <video style="border-radius: 5px;" id="camera-feed" height="372px" width="500px" autoplay ></video>
+            </div>
+            <button id="start-camera">Open Camera</button>
+            <button id="stop-camera">Close Camera</button>
+            <button id="snapshot">Take Snap</button>
         </div>
-        <button id="start-camera">Start Camera</button>
-        <button id="stop-camera">Stop Camera</button>
+    </div>
+    <div class="snap">
+        <div class="container">
+            <h2>SnapShot</h2>
+            <div class="canvas">
+                <canvas id="snap" width="500px" height="372px"></canvas>
+            </div>
+            <a id="download" href="#" download><button id="btn">Download</button></a>
         </div>
     </div>
 </body>
