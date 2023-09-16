@@ -112,7 +112,6 @@ download.addEventListener('click',() => {
         download.href = image;
         document.getElementById('btn').disabled = true
         document.getElementById('btn').style.backgroundColor = "#0056b3" ;
-        alert("Downloaded Successfully")
     }
 });
 
