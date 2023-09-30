@@ -69,14 +69,17 @@ function endGame() {
   userInput.value = '';
   userInput.setAttribute('disabled', '');
   p.classList.add('button');
-  p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
+  p.innerHTML = `<div class='newgame'>
+                    <h2>Start new Game</h2>
+                    <button class='start'>Start</button>
+                  </div>`;
   startOver.appendChild(p);
   playGame = false;
   newGame();
 }
 
 function newGame() {
-  const newGameButton = document.querySelector('#newGame');
+  const newGameButton = document.querySelector('.start');
   newGameButton.addEventListener('click', function (e) {
     randomNumber = parseInt(Math.random() * 100 + 1);
     prevGuess = [];

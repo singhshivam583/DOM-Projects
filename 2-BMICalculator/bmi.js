@@ -15,7 +15,7 @@ form.addEventListener('submit',function(event){
         results.innerHTML=`Please give valid height: ${height}`
     }
     else if(weight==="" || weight<0 || isNaN(weight) ){
-        results.innerHTML=`Please give valid wight: ${weight}`
+        results.innerHTML=`Please give valid weight: ${weight}`
     }
     else{
         const BMI=(weight / ((height * height) / 10000)).toFixed(2);
