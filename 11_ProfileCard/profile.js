@@ -30,57 +30,53 @@ const profile = [
     },
   ];
 
-  const img = document.getElementById('person-img');
-  const name = document.getElementById('person-name');
-  const job = document.getElementById('person-job');
-  const info = document.getElementById('person-info');
-  
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  const randomBtn = document.querySelector('.random-btn');
-  
-  
-  let itemIndex = 0;
-  
-  window.addEventListener('DOMContentLoaded', () => {
-    const item = profile[itemIndex];
-    img.src = item.img;
-    name.innerHTML = item.name;
-    job.innerHTML = item.job;
-    info.innerHTML = item.text;
-  });
+const img = document.getElementById('person-img');
+const name = document.getElementById('person-name');
+const job = document.getElementById('person-job');
+const info = document.getElementById('person-info');
 
-  function PersonDetails(person) {
-    const item = profile[person];
-    img.src = item.img;
-    name.innerHTML = item.name;
-    job.innerHTML = item.job;
-    info.innerHTML = item.text;
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const randomBtn = document.querySelector('.random-btn');
+
+
+let itemIndex = 0;
+
+window.addEventListener('DOMContentLoaded', () => {
+  const item = profile[itemIndex];
+  img.src = item.img;
+  name.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+});
+
+
+function PersonDetails(person) {
+  const item = profile[person];
+  img.src = item.img;
+  name.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+}
+
+nextBtn.addEventListener('click', () => {
+  itemIndex++;
+  if (itemIndex > profile.length - 1) {
+    itemIndex = 0;
   }
- 
+  PersonDetails(itemIndex);
+});
 
-  nextBtn.addEventListener('click', () => {
-    itemIndex++;
-    if (itemIndex > profile.length - 1) {
-      itemIndex = 0;
-    }
-    PersonDetails(itemIndex);
-  });
- 
+prevBtn.addEventListener('click', () => {
+  itemIndex--;
+  if (itemIndex < 0) {
+    itemIndex = profile.length - 1;
+  }
+  PersonDetails(itemIndex);
+});
 
-  prevBtn.addEventListener('click', () => {
-    itemIndex--;
-    if (itemIndex < 0) {
-      itemIndex = profile.length - 1;
-    }
-    PersonDetails(itemIndex);
-  });
-  
-
-
-  randomBtn.addEventListener('click', () => {
-    itemIndex = Math.floor(Math.random() *profile.length);
-
-    PersonDetails(itemIndex);
-  });
+randomBtn.addEventListener('click', () => {
+  itemIndex = Math.floor(Math.random() *profile.length);
+  PersonDetails(itemIndex);
+});
   

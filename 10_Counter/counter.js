@@ -48,7 +48,7 @@ const value = document.querySelector('#value')
 const btns = document.querySelectorAll(".btn")
 
 btns.forEach((btn) => btn.addEventListener('click', (e) => {
-    const event = e.target.innerHTML;
+    const event = e.currentTarget.textContent;
     
     if(event == 'decrease'){
         count--;
