@@ -9,6 +9,7 @@
   border-radius: 10px;
   padding: 1rem;
   align-items: center;
+  margin: 0 25%;
  
 }
 label{
@@ -49,6 +50,23 @@ button {
 #weight-guide{
   border: 1px solid black;
   border-radius: 10px;
-  width: 70%;
+  min-width: 20%;
   padding: 5px;
 }
+
+@media screen and (max-width:1100px) {
+  .container{
+    margin: 0 15%;
+  }
+}
+@media screen and (max-width:600px) {
+  .container{
+    margin: 0 10%;
+  }
+}
+@media screen and (max-width:600px) {
+  .container{
+    margin: 0 0;
+  }
+}
+
