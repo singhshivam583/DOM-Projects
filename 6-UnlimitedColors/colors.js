@@ -12,26 +12,26 @@ const randomColor=function(){
 
 // console.log(randomColor());
 let intervalId;
+const start = document.querySelector('#start')
+const stop = document.querySelector('#stop')
 
 const startChangingColor=function(){ 
     const changeBgColor=function(){
         document.body.style.backgroundColor=randomColor();
     }  
     intervalId= setInterval(changeBgColor,1000)
-    document.querySelector('#start').disabled = true;   
-    document.querySelector('#stop').disabled = false; 
+    start.disabled = true;   
+    stop.disabled = false; 
 }
 
 const stopChangingColor=function(){
     clearInterval(intervalId);
     intervalId=null;  
-    console.log(intervalId);
-    document.querySelector('#start').disabled = false;   
-    document.querySelector('#stop').disabled = true;  
+    // console.log(intervalId);
+    start.disabled = false;   
+    stop.disabled = true;  
 }
 
-document.querySelector('#start').
-addEventListener('click',startChangingColor)
+start.addEventListener('click',startChangingColor)
 
-document.querySelector('#stop').
-addEventListener('click',stopChangingColor)
+stop.addEventListener('click',stopChangingColor)

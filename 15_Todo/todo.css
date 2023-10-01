@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    padding: 2rem;
+}
+
+.container{
+    background-color: #f5f6fa;
+    text-align: center;
+    border-radius: 10px;
+    padding: 2rem;
+    min-height: 80vh;
+   
+}
+.form{
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 0px 10px rgba(0,0,100, 0.3);
+    border-radius: 5px;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: auto 6rem ;
+    max-width: 700px;
+}
+.form:hover{
+    box-shadow: 0 0px 10px rgba(0,0,100, 0.4);
+}
+
+.input, .submit {
+    padding:  .4rem .7rem;
+    background: #f5f6fa;
+    border: 1px solid rgb(201, 192, 192);
+}
+
+.input{
+    width: auto;
+    border-right: none;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.submit{
+    width: auto;
+    border-left: none;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #645cff;
+    color: white;
+}
+.submit:hover{
+    color: black;
+    cursor: pointer;
+}
+.todo-box{
+    list-style: none;
+}
+
+.articles{
+    text-align: left;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 0px 10px rgba(0,0,100, 0.3);
+    border-radius: 5px;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 1rem auto 1rem 2rem ;
+    max-width: 700px;
+}
+
+.articles:hover{
+    box-shadow: 0 0px 10px rgba(0,0,100, 0.6);
+}
+.checkbox{
+    accent-color: black;
+}
+.checkbox:hover{
+    cursor: pointer;
+    accent-color: #645cff;
+}
+
+p{
+    margin-left: 1rem ;
+}
+button{
+    border: none;
+    background: none;
+}
+#icon-1:hover{
+    color: #645cff;
+}
+#icon-2{
+    margin-left: 1rem;
+}
+#icon-2:hover{
+    color: red;
+}
+i:hover{
+    cursor: pointer;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+      grid-template-columns: 1fr;
+    }
+   .main{
+    padding:0;
+   }
+   .input{
+        border-radius: 5px;
+    }
+
+    .submit{
+        border-radius: 5px;
+        background: #645cff;
+        color: white;
+    }
+    .form{
+        padding: 1rem;
+    }
+    .container{
+        padding: 1rem;
+    }
+   
+   
+}
