@@ -7,25 +7,27 @@ submit.addEventListener('click', (e) => {
     const value = input.value;
     if (value === '') {
         alert("Please enter your task");
-    } else {
+    }else {
         addTodo(value);
-        input.value = ''; // Clear the input field after adding
+        input.value = '';   // Clear the input field after adding
     }
 });
 
 const addTodo = (item) => {
     const listItem = document.createElement('li');
-    const checkboxId = `checkbox-${Date.now()}`; // Generate a unique ID
-    listItem.innerHTML = `<div class="articles">
-        <input type="checkbox" name="${checkboxId}" id="${checkboxId}" class="checkbox">
-        <p class="content">${item}</p>
-        <button class="icon-1">
-            <i class="fas fa-edit" id="icon-1"></i>
-        </button>
-        <button class="icon-2">
-            <i class="fas fa-trash" id="icon-2"></i>
-        </button>
-    </div>`;
+    const checkboxId = `checkbox-${Date.now()}`;       // Generate a unique ID
+    listItem.innerHTML = `
+                        <div class="articles">
+                            <input type="checkbox" name="${checkboxId}" id="${checkboxId}" class="checkbox">
+                            <p class="content">${item}</p>
+                            <button class="icon-1">
+                                <i class="fas fa-edit" id="icon-1"></i>
+                            </button>
+                            <button class="icon-2">
+                                <i class="fas fa-trash" id="icon-2"></i>
+                            </button>
+                        </div>
+    `;
 
     todo.appendChild(listItem);
 
@@ -33,16 +35,14 @@ const addTodo = (item) => {
     const checkbox = listItem.querySelector('.checkbox');
     checkbox.addEventListener('click', () => {
         const p = listItem.querySelector('.content');
-        if (!checkbox.checked) {
-            p.classList.remove('checked');
-        } else {
-            p.classList.add('checked');
-        }
+        //console.log(`Checkbox is ${checkbox.checked}`);
+        (checkbox.checked) ? p.classList.add('checked') : p.classList.remove('checked');
+            
     });
 
     const deleteButton = listItem.querySelector('.icon-2');
     deleteButton.addEventListener('click', () => {
-        listItem.remove(); // Remove the list item when delete is clicked
+        listItem.remove();                                  // Remove the list item when delete is clicked
     });
 
     // Add event listener to the edit button (icon-1)
