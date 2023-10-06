@@ -83,6 +83,7 @@
 
 p{
     margin-left: 1rem ;
+    width: fit-content;
 }
 button{
     border: none;
@@ -127,6 +128,5 @@ i:hover{
     .container{
         padding: 1rem;
     }
-   
    
 }
