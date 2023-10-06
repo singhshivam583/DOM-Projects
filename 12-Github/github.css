@@ -144,7 +144,14 @@ form:hover{
         grid-template-columns: auto ;
     }
     .input{
+        border-radius: 5px;
         margin-bottom: .5rem;
+    }
+    
+    .searchBtn{
+        border-radius: 5px;
+        background: #645cff;
+        color: white;
     }
   }
 
