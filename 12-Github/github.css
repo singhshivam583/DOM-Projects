@@ -143,6 +143,9 @@ form:hover{
     form{
         grid-template-columns: auto ;
     }
+    .input{
+        margin-bottom: .5rem;
+    }
   }
 
  

@@ -45,7 +45,8 @@ const getDetails = (data) =>{
             </article>
             `
     }).join('');
-    result.innerHTML = `<div class='articles'>
+    result.innerHTML = `<h2>Your GitHub Followers</h2>
+                        <div class='articles'>
                             ${list}
                         </div>`;
 };
