@@ -1,8 +1,13 @@
 # DOM-Projects
 
 ##### This repository contains a collection of projects that demonstrate the use of JavaScript to manipulate and interact with HTML documents.
+
 <hr>
-Here is the whole Project Link : [https://dom-projects-shivam.vercel.app/](https://dom-projects-shivam.vercel.app/), otherwise you can check individually.
+
+Here is the whole Project Link : [https://dom-projects-shivam.vercel.app/](https://dom-projects-shivam.vercel.app/),
+otherwise you can check individually.
+
+<br>
 
 | Projects                    | Live Test                                                                               |
 | --------------              | -------------                                                                           |
