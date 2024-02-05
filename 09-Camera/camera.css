@@ -1,0 +1,69 @@
+body{
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background-color: #414141;
+    border: 1px solid #ccc;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+.box{
+    border: 1px solid #ccc;
+    width: 500px;
+    height: 372px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+button{
+    background-color: rgb(0, 123, 255);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(0, 86, 179);
+}
+#snapshot{
+    background-color: rgb(255, 0, 0);
+}
+#snapshot:hover{
+    background-color: rgb(210, 0, 10);
+}
+
+.snap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.canvas{
+    border: 1px solid #ccc;
+    width: 500px;
+    height: 372px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+#snap{
+    width: 500px;
+    height: 372px;
+    background-size: cover;
+}
+

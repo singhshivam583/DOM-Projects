@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Access</title>
+    <link rel="stylesheet" href="camera.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" aria-current="page">Home</a>
+        <a target="_blank" href="https://github.com/singhshivam583">Git-Hub</a>
+    </nav>
+    <div class="body">
+        <div class="container">
+            <h1>Camera Access </h1>
+            <div class="box" id="box">
+                <video style="border-radius: 5px;" id="camera-feed" height="372px" width="500px" autoplay ></video>
+            </div>
+            <button id="start-camera">Open Camera</button>
+            <button id="stop-camera">Close Camera</button>
+            <button id="snapshot">Take Snap</button>
+        </div>
+    </div>
+    <div class="snap">
+        <div class="container">
+            <h2>SnapShot</h2>
+            <div class="canvas">
+                <canvas id="snap" width="500px" height="372px"></canvas>
+            </div>
+            <a id="download" href="#" download><button id="btn">Download</button></a>
+        </div>
+    </div>
+</body>
+<script src="./camera.js"></script>
+</html>
